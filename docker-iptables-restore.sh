@@ -1,6 +1,6 @@
 #!/bin/bash
 
-infile=./iptables2
+infile=/etc/iptables/pushediptablesrules
 today=$(date +"%Y%m%d")
 rules=$(cat /etc/iptables/filter-${today} | grep -e "^-A FORWARD " -e "^-A DOCKER " -e "^-A DOCKER-ISOLATION " )
 
